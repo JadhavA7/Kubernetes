@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: hellojob
+spec:
+   completion: 5 (five times start job pod)
+   parallelism: 2 ( two start at time)
+   template:
+      metadata:
+         labels:
+           app: hello
+      spec:
+        containers:
+          - name: hello
+            image: busybox
+            command: ["echo","hello,k8s"]
+        restartPolicy: Never
+   backoffLimit: 4
