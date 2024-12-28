@@ -3,7 +3,7 @@ kind: Job
 metadata:
    name: hellojob
 spec:
-   completion: 5 (five times start job pod)
+   completions: 5 (five times start job pod)
    parallelism: 2 ( two start at time)
    template:
       metadata:
