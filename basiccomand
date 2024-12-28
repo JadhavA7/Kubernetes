@@ -6,6 +6,11 @@ kubectl describe pod pod_name
 kubectl logs pod_name
 kubectl exec -it pod_name -- /bin/bash
 
-
-
 kubectl apply -f file_name
+kubect delete all --all --force
+
+# kiad bakabcer DNS name
+kubectl get endpoints
+
+# for same lable show all pods
+kubectl get pods -l app=myapp
