@@ -1,5 +1,12 @@
-kubectl rollout history deploy mydeployment
+kubect rollout status deployment
+
 kubectl rollout undo deploy mydeployment --to-revision=2
+
 kubectl annotate deployments.apps mydeployment kubernetes.io/change-cause="nayahai"
 
 kubectl set image deploy/mydeployment nginxcontaine=php  
+
+# check update deployment 
+kunectl get deploy deploy_name -o yaml
+
+kubectl rollout history deploy mydeploymen
